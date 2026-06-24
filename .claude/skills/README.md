@@ -6,12 +6,12 @@ Skills are the counterpart to the [rules](../rules/). Rules are *always* in cont
 
 Two principles keep them clean:
 
-- **Skills orchestrate; rules judge.** A skill *references* the rules ([`four-actions`](../rules/four-actions.md), [`atomic-operation`](../rules/atomic-operation.md), …) — it never restates them (single source of truth). The importers below don't bypass the vault's discipline: every item they bring in is deduped, mapped to a four-actions verdict, reviewed with you, and applied as a normal atomic operation.
+- **Skills orchestrate; rules judge.** A skill *references* the rules ([`four-actions`](../rules/four-actions.md), [`atomic-operation`](../rules/atomic-operation.md), …) — it never restates them (single source of truth). The capture skills below don't bypass the vault's discipline: every item they bring in is deduped, mapped to a four-actions verdict, reviewed with you, and applied as a normal atomic operation.
 - **Loaded on demand, by description.** Only each skill's `name` + `description` sit in context until it actually fires, so the toolkit can be large without bloating every session. That `description` is what makes a skill trigger at the right moment.
 
 ## The skills
 
-Grouped by job: bring sources in, find and read, author Obsidian content, and spin a proposal into a project. The **Needs** column flags anything beyond Claude Code itself. Source-specific bulk importers (Notion, Apple Notes, YouTube, …) live in a separate add-on repo, not in this core toolkit.
+Grouped by job: bring sources in, find and read, author Obsidian content, and spin a proposal into a project. The **Needs** column flags anything beyond Claude Code itself. Source-specific bulk importers (Notion, Apple Notes, YouTube, …) live in a separate [add-on pack](https://github.com/JJkasdae/exocortex-addons), not in this core toolkit.
 
 **Ingest sources into notes** — runs the four-actions capture flow and commits one atomic operation at a time.
 
