@@ -11,15 +11,13 @@ Two principles keep them clean:
 
 ## The skills
 
-Three groups: bring sources in, find and read, author Obsidian content. The **Needs** column flags anything beyond Claude Code itself.
+Grouped by job: bring sources in, find and read, author Obsidian content, and spin a proposal into a project. The **Needs** column flags anything beyond Claude Code itself. Source-specific bulk importers (Notion, Apple Notes, YouTube, …) live in a separate add-on repo, not in this core toolkit.
 
-**Ingest external sources into notes** — each runs the four-actions capture flow and commits one atomic operation at a time.
+**Ingest sources into notes** — runs the four-actions capture flow and commits one atomic operation at a time.
 
 | Skill | Brings in | Needs |
 |---|---|---|
 | [`pdf-to-notes`](pdf-to-notes/SKILL.md) | A PDF → one source/hub note + atomic concept notes; original stored in `Sources/`. Per-document, repeatable. | — (Claude reads PDFs) |
-| [`notion-import`](notion-import/SKILL.md) | Your Notion page tree → vault notes. One-time bulk migration. | connected Notion MCP |
-| [`apple-notes-import`](apple-notes-import/SKILL.md) | Your Apple Notes → vault notes. One-time bulk migration. | macOS + `pandoc` |
 
 **Find & read** — pull in content to work with, from the web, a video, or your own vault.
 
@@ -27,7 +25,6 @@ Three groups: bring sources in, find and read, author Obsidian content. The **Ne
 |---|---|---|
 | [`rag-search`](rag-search/SKILL.md) | Semantic / fuzzy search over the vault, plus the reindex that keeps the store in sync. Complements plaintext + graph search. | `.venv` ([setup §3](../../README.md)) |
 | [`defuddle`](defuddle/SKILL.md) | Clean markdown from a web page (strips nav/clutter) — for reading or analysis. | Defuddle CLI |
-| [`youtube-transcript`](youtube-transcript/SKILL.md) | A YouTube video's transcript, corrected & summarized — to discuss or capture. | `uv` |
 
 **Author Obsidian-native content** — produce correct Obsidian-flavored files.
 

@@ -55,7 +55,7 @@ Each folder links to its own README (where one exists) — this file is the top-
 | [`Sources/`](Sources/README.md) | Original source files (PDFs, etc.); kept locally, not committed to git. |
 | [`Templates/`](Templates/README.md) | Note templates Scribe uses when creating notes. |
 | [`.claude/rules/`](.claude/rules/README.md) | The always-loaded judgment rules both agents obey. |
-| [`.claude/skills/`](.claude/skills/README.md) | On-demand procedures: semantic search, PDF/YouTube/Notion/Apple Notes import, Obsidian helpers, and scaffolding a proposal into a new project repo. |
+| [`.claude/skills/`](.claude/skills/README.md) | On-demand procedures: semantic search, PDF import, web-page extraction, Obsidian authoring helpers, and scaffolding a proposal into a new project repo. |
 | [`.claude/agents/`](.claude/agents/gardener.md) | The **Gardener** sub-agent definition. |
 | `.claude/log/` | Append-only JSONL ledger of every vault change — format in [`log-schema.md`](.claude/rules/log-schema.md); personal, not committed. |
 | [`user_level_file_template/`](user_level_file_template/README.md) | A template for your personal user-level `CLAUDE.md` profile. |
@@ -160,7 +160,7 @@ To run maintenance: *"run Gardener"* or *"scan the vault for cleanup."* It retur
 
 The vault is the data; the agent layer is yours to shape. You're not limited to what ships here — this is the path from "a note-taking helper" to a private assistant that lives in *your* context and tools.
 
-- **Add your own skills.** The repo ships importers (PDF, YouTube, Notion, Apple Notes) and Obsidian helpers in [`.claude/skills/`](.claude/skills/README.md) — and you can add whatever workflow *you* repeat. **No coding needed:** describe what you want with the [skill-creation guide](.claude/skills/creating-skills.md) and Claude builds it (or use the `claude-skill-creator` skill to scaffold one). New skills load on demand.
+- **Add your own skills.** The repo ships a focused core toolkit (PDF import, semantic search, web-page extraction, Obsidian helpers, project scaffolding) in [`.claude/skills/`](.claude/skills/README.md). Source-specific bulk importers (Notion, Apple Notes, YouTube, …) live in a separate add-on pack you install only if you need them — and you can add whatever workflow *you* repeat. **No coding needed:** describe what you want with the [skill-creation guide](.claude/skills/creating-skills.md) and Claude builds it (or use the `claude-skill-creator` skill to scaffold one). New skills load on demand.
 - **Connect MCP servers.** Wire in [MCP](https://modelcontextprotocol.io) servers — email, calendar, drive, task trackers, and more — so the assistant reaches beyond the vault into the tools you already live in.
 - **Adapt the rules.** The judgment in [`.claude/rules/`](.claude/rules/README.md) is editable. Tune what's worth capturing, how notes link, and how strict it is — make it think the way *you* do.
 
