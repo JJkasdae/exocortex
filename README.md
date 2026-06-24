@@ -16,6 +16,16 @@ The vault is just markdown files in git. You own it completely, forever, with no
 - **A thinking companion.** Ask it what you've learned about X, challenge an idea against your past notes, brainstorm new angles — it grounds every answer in what's actually in *your* vault and cites the notes.
 - **Disciplined and auditable.** Nothing changes your vault without your explicit approval. Every modification is one atomic git commit plus a logged reason, so you can always trace *what changed and why*.
 
+## The ExoCortex family
+
+ExoCortex ships as a small family of repos. This is the core; add-ons are optional and install only if you need them.
+
+| Repo | What it is |
+|---|---|
+| **ExoCortex Claude Code edition** (this repo) | The core agent: the rule set, the Scribe and Gardener agents, and the vault-intrinsic skill toolkit. Everything needed to run the second brain. |
+| [**ExoCortex add-on pack**](https://github.com/JJkasdae/exocortex-addons) | Optional, source-specific add-ons that bolt onto the core: bulk importers for Notion, Apple Notes, and YouTube, with MCP servers and tools to follow. Install only what you need. |
+| **ExoCortex Codex edition** | The same agent ported to Codex (ChatGPT). Planned. |
+
 ## How it works
 
 Two agents, one shared vault:
